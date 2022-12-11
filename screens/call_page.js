@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import ZegoUIKitPrebuiltCall, {ONE_ON_ONE_VIDEO_CALL_CONFIG} from '@zegocloud/zego-uikit-prebuilt-call-rn';
+import ZegoUIKitPrebuiltCall, {GROUP_VIDEO_CALL_CONFIG} from '@zegocloud/zego-uikit-prebuilt-call-rn';
 import {View} from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
@@ -13,14 +13,14 @@ const navigation = useNavigation();
           <ZegoUIKitPrebuiltCall
             appID={1638232801}
             appSign='a9ccfd452c3e48c960255681a4a7c01e6f5aeedadb8330b92c999849da22acfc'
-            userID={"1234"} //userID can be something like phone number or the user id on your own app
+            userID={"1234"} //userID can be something like phone number or the user id on your own user system.
             userName={'codewithdarkwa'}
             callID ={'darkwa_01'} //CallID can be any unique string.
 
             config={{
-              //You can also use ONE_ON_ONE_VIDEO_CALL_CONFIG/GROUP_VIDEO_CALL_CONFIG/GROUP_VOICE_CALL_CONFIGB
-              ...ONE_ON_ONE_VIDEO_CALL_CONFIG,
-              onOnlySelfInRoom: () =>{navigation.navigate('home')},
+              //You can also use ONE_ON_ONE_VIDEO_CALL_CONFIG/GROUP_VIDEO_CALL_CONFIG/GROUP_VOICE_CALL_CONFIG  to make more types of calls
+              ...GROUP_VIDEO_CALL_CONFIG,
+             
               onHangUp: () => {navigation.navigate('home')},
             }}
           />
