@@ -1,4 +1,3 @@
-import React,{Component} from 'react';
 import ZegoUIKitPrebuiltCall, {GROUP_VIDEO_CALL_CONFIG} from '@zegocloud/zego-uikit-prebuilt-call-rn';
 import {View} from 'react-native';
 
